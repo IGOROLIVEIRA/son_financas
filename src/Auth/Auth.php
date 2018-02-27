@@ -1,8 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace SON\Auth;
-
+namespace SONFin\Auth;
 class Auth implements AuthInterface
 {
     /**
@@ -13,17 +12,20 @@ class Auth implements AuthInterface
     public function __construct(JasnyAuth $jasnyAuth)
     {
         $this->jasnyAuth = $jasnyAuth;
+        $this->sessionStart();
+        
     }
 
     public function login(array $credentials): bool
     {
         list('email' => $email, 'password' => $password) = $credentials;
         return $this->jasnyAuth->login($email, $password) !== null;
+
     }
 
     public function check(): bool
     {
-        // TODO: Implement check() method.
+        return $this->user() !== null;
     }
 
     public function logout(): void
@@ -35,4 +37,15 @@ class Auth implements AuthInterface
     {
         return $this->jasnyAuth->hashPassword($password);
     }
+
+    protected function sessionStart(){
+        if(session_status() == PHP_SESSION_NONE){
+           session_start();
+        }
+    }
+    public function user(): ?UserInterface
+    {
+        return $this->jasnyAuth->user();
+    }
+
 }

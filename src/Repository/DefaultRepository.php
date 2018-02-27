@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace SONFin\Repository;
 
 
-class DefaultRepository implements RepositoryInteface
+class DefaultRepository implements RepositoryInterface
 {
     /**
      * @var string
@@ -47,13 +47,13 @@ class DefaultRepository implements RepositoryInteface
         $model = $this->find($id);
         $model->delete();
     }
-    public function find(int $id , $failIfNotExist = true)
+    public function find(int $id , bool $failIfNotExist = true)
     {
         return $failIfNotExist ? $this->model->findOrfail($id) : $this->model->find($id);
     }
 
-    public function findByField(string $field, $value): array
+    public function findByField(string $field, $value)
     {
-       return $this->model->where($field,'=',$value)->toArray();
+       return $this->model->where($field,'=',$value)->get();
     }
 }
