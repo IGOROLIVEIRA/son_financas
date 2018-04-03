@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="655128b2-6bbc-4f8b-b752-3e1bd725ef86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/seeds/BillPaysSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/seeds/BillReceivesSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/BillPay.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/BillReceive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/CategoryCostRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/CategoryCostRepositoryInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/bill-pays.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/bill-receives.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/charts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/statements.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helpers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-pays/_form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-pays/create.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-pays/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-pays/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-pays/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-receives/_form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-receives/create.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-receives/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-receives/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bill-receives/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/statements.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/son-financas.iml" afterPath="$PROJECT_DIR$/.idea/son-financas.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php" afterPath="$PROJECT_DIR$/db/seeds/CategoryCostsSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrate-seed.php" afterPath="$PROJECT_DIR$/migrate-seed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.php" afterPath="$PROJECT_DIR$/src/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Auth/Auth.php" afterPath="$PROJECT_DIR$/src/Auth/Auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Auth/AuthInterface.php" afterPath="$PROJECT_DIR$/src/Auth/AuthInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/CategoryCost.php" afterPath="$PROJECT_DIR$/src/Models/CategoryCost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Plugins/DbPlugin.php" afterPath="$PROJECT_DIR$/src/Plugins/DbPlugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/DefaultRepository.php" afterPath="$PROJECT_DIR$/src/Repository/DefaultRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/RepositoryInterface.php" afterPath="$PROJECT_DIR$/src/Repository/RepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/auth.php" afterPath="$PROJECT_DIR$/src/controllers/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/category-costs.php" afterPath="$PROJECT_DIR$/src/controllers/category-costs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.html.twig" afterPath="$PROJECT_DIR$/templates/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -539,7 +504,7 @@
       <workItem from="1522059401454" duration="72000" />
       <workItem from="1522152996088" duration="2389000" />
       <workItem from="1522166496094" duration="1190000" />
-      <workItem from="1522790796162" duration="18000" />
+      <workItem from="1522790796162" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="até a parte de login">
       <created>1519742234282</created>
@@ -555,11 +520,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519742251928</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="até a parte de extrato">
+      <created>1522790836712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1522790836712</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50408000" />
+    <option name="totallyTimeSpent" value="50498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -637,7 +609,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="até a parte de login" />
-    <option name="LAST_COMMIT_MESSAGE" value="até a parte de login" />
+    <MESSAGE value="até a parte de extrato" />
+    <option name="LAST_COMMIT_MESSAGE" value="até a parte de extrato" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
