@@ -1,7 +1,10 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-
+if(file_exists(__DIR__ .'/.env')) {
+    $dotenv = new \Dotenv\Dotenv(__DIR__);
+    $dotenv->overload();
+}
 $db = include __DIR__ . '/config/db.php';
 list(
      'driver' => $adapter,
@@ -11,7 +14,7 @@ list(
      'password' => $pass,
      'charset'  => $charset,
      'collation'=> $collation
-) = $db['development'];
+) = $db['default_connection'];
 return[
     'paths' =>[ //local que gera as migrations
        'migrations' => [
@@ -23,7 +26,7 @@ return[
     ],
     'environments' =>[ //configuracao do banco de dados
         'default_migration_table' => 'migrations', //difine tabela para gravar quais migracoes rodou
-        'dafault_database' => 'development',
+        'dafault_database' => 'default_connection',
         'development' => [
             'adapter' => $adapter,
             'host' => $host,

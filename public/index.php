@@ -10,8 +10,11 @@ use \SONFin\Plugins\AuthPlugin;
 use SONFin\Models\CategoryCost;
 
 require_once  __DIR__ . '/../vendor/autoload.php';
+if(file_exists(__DIR__ .'/../.env')) {
+    $dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
+    $dotenv->overload();
+}
 require_once __DIR__ . '/../src/helpers.php';
-
 
 $routerContainer = new ServiceContainer();
 $app = new Application($routerContainer);
@@ -26,6 +29,7 @@ $app->get('/home/{name}/{id}', function (ServerRequestInterface $request){
     $response->getBody()->write("response com emmiter do diactoros");
     return $response;
 });
+require_once __DIR__ . '/../src/controllers/charts.php';
 require_once __DIR__ . '/../src/controllers/statements.php';
 require_once __DIR__ . '/../src/controllers/category-costs.php';
 require_once __DIR__ . '/../src/controllers/bill-receives.php';
