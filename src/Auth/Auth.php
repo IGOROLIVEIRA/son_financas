@@ -2,6 +2,9 @@
 declare(strict_types = 1);
 
 namespace SONFin\Auth;
+
+use SONFin\Models\UserInterface;
+
 class Auth implements AuthInterface
 {
     /**
@@ -30,7 +33,7 @@ class Auth implements AuthInterface
 
     public function logout(): void
     {
-        // TODO: Implement logout() method.
+        $this->jasnyAuth->logout();
     }
 
     public function hashPassword(string $password): string 

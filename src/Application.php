@@ -14,12 +14,30 @@ use Psr\Http\Message\ServerRequestInterface;
 class Application
 {
    private $serviceContainer;
+    private $befores = [];
 
    public function __construct(ServiceContainerInterface $serviceContainer)
    {
        $this->serviceContainer = $serviceContainer;
    }
+   // usado para não deixar usuário acessar rotas sem estar lagado
+   public function before(callable $callback): Application
+   {
+        array_push($this->befores, $callback);
+        return $this;
+   }
+   // usado para não deixar usuário acessar rotas sem estar lagado
+   protected function runBefores(): ?ResponseInterface
+   {
+        foreach ($this->befores as $callback) {
+            $result = $callback($this->service(RequestInterface::class));
+            if($result instanceof ResponseInterface){
+                return $result;
+            }
+        }
 
+        return null;
+   }
    public function service($name)
    {
        return $this->serviceContainer->get($name);
@@ -62,6 +80,11 @@ class Application
        }
        foreach ($route->attributes as $key => $value){
            $request=$request->withAttribute($key,$value);
+       }
+       $result = $this->runBefores();
+       if($result){
+           $this->emitResponse($result);
+           return;
        }
        $callable = $route->handler;
        $response = $callable($request);
