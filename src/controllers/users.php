@@ -32,6 +32,7 @@ $app
             'user' => $user
         ]);
     }, 'users.edit')
+
     ->post('/users/{id}/update', function (ServerRequestInterface $request) use ($app) {
         $repository = $app->service('user.repository');
         $id = $request->getAttribute('id');
