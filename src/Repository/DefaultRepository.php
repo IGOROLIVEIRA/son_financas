@@ -57,18 +57,17 @@ class DefaultRepository implements RepositoryInterface
        return $this->model->where($field,'=',$value)->get();
     }
 
-    public function findOneBy(array $search)
-    {
-        $queryBuilder = $this->model;
-        foreach ($search as $field => $value){
-            $queryBuilder = $queryBuilder->where($field, '=', $value);
-        }
-
-        return $queryBuilder->firstOrFail();
-    }
-
     protected function findInternal($id)
     {
-        return is_array($id) ? $this->findOneBy($id) : $this->find($id);
+        return is_array($id) ? $model = $this->findOneBy($id) : $this->find((int)$id);
+    }
+    public function findOneBy(array $search)
+
+    {
+        $queryBuilder = $this->_model;
+        foreach ($search as $field => $value) {
+            $queryBuilder = $queryBuilder->where($field, '=', $value);
+        }
+        return $queryBuilder->firstOrFail();
     }
 }
