@@ -1,4 +1,9 @@
 .idea
 php_errors.log
-vendor
+/vendor
 .env
+.DS_Store
+db/.DS_Store
+src/.DS_Store
+src/View/.DS_Store	
+templates/.DS_Store
